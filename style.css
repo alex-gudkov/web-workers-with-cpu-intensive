@@ -1,0 +1,44 @@
+@keyframes block-slide {
+  from {
+    margin-left: 0px;
+  }
+
+  to {
+    margin-left: calc(100% - 100px);
+  }
+}
+
+.block-container {
+  height: 100px;
+  width: 500px;
+  background: #000;
+}
+
+.block {
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  animation: 1s linear 0s infinite alternate block-slide;
+  
+  background-color: blue;
+}
+
+#button-local {
+  margin: 10px;
+}
+
+#button-worker {
+  margin: 10px;
+}
+
+.block:hover {
+  background-color: red;
+}
+
+.block-text {
+  color: #fff;
+}
