@@ -1,4 +1,5 @@
 import { fibonacci } from './fibonacci.js';
+import { countFibonacciNumberInOtherThread } from './count-fibonacci-number-in-other-thread.js';
 
 console.log(import.meta);
 
@@ -13,6 +14,10 @@ buttonLocal.addEventListener('click', () => {
   console.log('result', result);
 });
 
-buttonWorker.addEventListener('click', () => {
+buttonWorker.addEventListener('click', async () => {
   console.log('#button-worker clicked');
+
+  const result = await countFibonacciNumberInOtherThread(42);
+
+  console.log('result', result);
 });
