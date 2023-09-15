@@ -2,11 +2,17 @@ import { fibonacci } from './fibonacci.js';
 
 const FIBONACCI_POSITION = 40;
 
-export function countFibonacciNumberInMainThread() {
-  console.log('Local started');
-
+function countFibonacciNumberInMainThread() {
   const n = FIBONACCI_POSITION;
   const result = fibonacci(n);
+
+  return result;
+}
+
+export function runLocal() {
+  console.log('Local started');
+
+  const result = countFibonacciNumberInMainThread();
 
   console.log('Local result:', result);
 }

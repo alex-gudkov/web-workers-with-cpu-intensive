@@ -1,12 +1,9 @@
 const FIBONACCI_POSITION = 40;
 
-export async function countFibonacciNumberInOtherThread() {
-  console.log('Worker started');
-
+async function countFibonacciNumberInOtherThread() {
   const worker = new Worker('./thread.js', { type: 'module' });
 
   const n = FIBONACCI_POSITION;
-
   const result = await new Promise((resolve, reject) => {
     worker.onmessage = (event) => {
       resolve(event.data);
@@ -20,6 +17,14 @@ export async function countFibonacciNumberInOtherThread() {
   });
 
   worker.terminate();
+
+  return result;
+}
+
+export async function runWorker() {
+  console.log('Worker started');
+
+  const result = await countFibonacciNumberInOtherThread();
 
   console.log('Worker result:', result);
 }

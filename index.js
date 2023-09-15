@@ -1,13 +1,13 @@
-import { countFibonacciNumberInOtherThread } from './count-fibonacci-number-in-other-thread.js';
-import { countFibonacciNumberInMainThread } from './count-fibonacci-number-in-main-thread.js';
+import { runWorker } from './run-worker.js';
+import { runLocal } from './run-local.js';
 
 const buttonLocal = document.getElementById('button-local');
 const buttonWorker = document.getElementById('button-worker');
 
-buttonLocal.addEventListener('click', () => {
-  countFibonacciNumberInMainThread();
-});
+buttonLocal.onclick = () => {
+  runLocal();
+};
 
-buttonWorker.addEventListener('click', () => {
-  countFibonacciNumberInOtherThread();
-});
+buttonWorker.onclick = () => {
+  runWorker();
+};
