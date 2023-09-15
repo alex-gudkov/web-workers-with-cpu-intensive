@@ -3,14 +3,16 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Web Worker</title>
+  <title>Web Workers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <h3>Web Workers with CPU-intensive</h3>
+
   <div class="block-container">
     <div class="block">
-      <span class="block-text">Block</span>
+      Block
     </div>
   </div>
 
@@ -19,7 +21,7 @@
     <button id="button-worker">Run Worker</button>
   </div>
 
-  <script type="module" src="./src/index.js"></script>
+  <script type="module" src="./src/index.js" defer></script>
 </body>
 
 </html>

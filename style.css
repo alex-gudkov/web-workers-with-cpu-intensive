@@ -1,3 +1,7 @@
+* {
+  font-family: Arial;
+}
+
 @keyframes block-slide {
   from {
     margin-left: 0px;
@@ -9,8 +13,9 @@
 }
 
 .block-container {
-  height: 50px;
   width: 200px;
+  height: 50px;
+
   background: lightgray;
 }
 
@@ -25,6 +30,8 @@
   animation: 1s linear 0s infinite alternate block-slide;
   
   background-color: dodgerblue;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
 }
 
 #button-local {
@@ -37,9 +44,4 @@
 
 .block:hover {
   background-color: crimson;
-}
-
-.block-text {
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: bold;
 }
