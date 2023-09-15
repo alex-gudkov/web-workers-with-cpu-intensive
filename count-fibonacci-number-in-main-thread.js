@@ -3,9 +3,10 @@ import { fibonacci } from './fibonacci.js';
 const FIBONACCI_POSITION = 40;
 
 export function countFibonacciNumberInMainThread() {
-  const n = FIBONACCI_POSITION;
+  console.log('Local started');
 
+  const n = FIBONACCI_POSITION;
   const result = fibonacci(n);
 
-  return result;
+  console.log('Local result:', result);
 }
