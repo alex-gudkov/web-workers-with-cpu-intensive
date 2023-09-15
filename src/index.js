@@ -1,5 +1,5 @@
-import { countFibonacciNumberInOtherThread } from './runners/run-worker.js';
-import { countFibonacciNumberInMainThread } from './runners/run-local.js';
+import { countFibonacciNumberInMainThread } from './runners/count-fibonacci-number-in-main-thread.js';
+import { countFibonacciNumberInWorkerThread } from './runners/count-fibonacci-number-in-worker-thread.js';
 import { Logger } from './logger/logger.js';
 
 const buttonLocal = document.getElementById('button-local');
@@ -26,7 +26,7 @@ buttonWorker.onclick = async () => {
   logger.log('Worker started.');
 
   try {
-    const result = await countFibonacciNumberInOtherThread();
+    const result = await countFibonacciNumberInWorkerThread();
     const endTimestamp = Date.now();
     const time = (endTimestamp - startTimestamp) / 1000;
 
