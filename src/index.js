@@ -1,5 +1,5 @@
-import { runWorker } from './run-worker.js';
-import { runLocal } from './run-local.js';
+import { runWorker } from './runners/run-worker.js';
+import { runLocal } from './runners/run-local.js';
 
 const buttonLocal = document.getElementById('button-local');
 const buttonWorker = document.getElementById('button-worker');

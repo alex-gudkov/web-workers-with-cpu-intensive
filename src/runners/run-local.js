@@ -1,5 +1,5 @@
-import { countFibonacciNumber } from './count-fibonacci-number.js';
-import { FIBONACCI_NUMBER_POSITION } from './fibonacci-number-position.js';
+import { countFibonacciNumber } from '../fibonacci/count-fibonacci-number.js';
+import { FIBONACCI_NUMBER_POSITION } from '../fibonacci/fibonacci-number-position.js';
 
 function countFibonacciNumberInMainThread() {
   const position = FIBONACCI_NUMBER_POSITION;
