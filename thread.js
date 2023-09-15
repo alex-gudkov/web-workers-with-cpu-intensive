@@ -1,8 +1,8 @@
-import { fibonacci } from './fibonacci.js';
+import { countFibonacciNumber } from './count-fibonacci-number.js';
 
 self.onmessage = (event) => {
-  const n = parseInt(event.data.n);
-  const result = fibonacci(n);
+  const position = parseInt(event.data.position);
+  const result = countFibonacciNumber(position);
 
   self.postMessage(result);
 };

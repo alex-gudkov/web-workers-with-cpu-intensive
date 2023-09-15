@@ -1,10 +1,9 @@
-import { fibonacci } from './fibonacci.js';
-
-const FIBONACCI_POSITION = 40;
+import { countFibonacciNumber } from './count-fibonacci-number.js';
+import { FIBONACCI_NUMBER_POSITION } from './fibonacci-number-position.js';
 
 function countFibonacciNumberInMainThread() {
-  const n = FIBONACCI_POSITION;
-  const result = fibonacci(n);
+  const position = FIBONACCI_NUMBER_POSITION;
+  const result = countFibonacciNumber(position);
 
   return result;
 }

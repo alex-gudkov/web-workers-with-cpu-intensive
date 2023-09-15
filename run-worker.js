@@ -1,9 +1,9 @@
-const FIBONACCI_POSITION = 40;
+import { FIBONACCI_NUMBER_POSITION } from './fibonacci-number-position.js';
 
 async function countFibonacciNumberInOtherThread() {
   const worker = new Worker('./thread.js', { type: 'module' });
 
-  const n = FIBONACCI_POSITION;
+  const position = FIBONACCI_NUMBER_POSITION;
   const result = await new Promise((resolve, reject) => {
     worker.onmessage = (event) => {
       resolve(event.data);
@@ -13,7 +13,11 @@ async function countFibonacciNumberInOtherThread() {
       reject(event.error);
     };
 
-    worker.postMessage({ n });
+    const data = {
+      position,
+    };
+
+    worker.postMessage(data);
   });
 
   worker.terminate();
