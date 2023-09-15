@@ -7,12 +7,13 @@ const buttonWorker = document.getElementById('button-worker');
 
 buttonLocal.onclick = () => {
   const logger = new Logger();
-  const start = Date.now();
+  const startTimestamp = Date.now();
 
   logger.log('Local started.');
 
   const result = countFibonacciNumberInMainThread();
-  const time = (Date.now() - start) / 1000;
+  const endTimestamp = Date.now();
+  const time = (endTimestamp - startTimestamp) / 1000;
 
   logger.log('Local result:', result);
   logger.log('Local time:', time);
@@ -20,13 +21,14 @@ buttonLocal.onclick = () => {
 
 buttonWorker.onclick = async () => {
   const logger = new Logger();
-  const start = Date.now();
+  const startTimestamp = Date.now();
 
   logger.log('Worker started.');
 
   try {
     const result = await countFibonacciNumberInOtherThread();
-    const time = (Date.now() - start) / 1000;
+    const endTimestamp = Date.now();
+    const time = (endTimestamp - startTimestamp) / 1000;
 
     logger.log('Worker result:', result);
     logger.log('Worker time:', time);
