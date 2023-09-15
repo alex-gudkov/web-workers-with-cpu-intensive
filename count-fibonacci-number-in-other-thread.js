@@ -1,4 +1,6 @@
-export function countFibonacciNumberInOtherThread(n) {
+const FIBONACCI_POSITION = 40;
+
+export function countFibonacciNumberInOtherThread() {
   const worker = new Worker('./thread.js', { type: 'module' });
 
   return new Promise((resolve, reject) => {
@@ -9,6 +11,8 @@ export function countFibonacciNumberInOtherThread(n) {
     worker.addEventListener('error', (event) => {
       reject(event.error);
     });
+
+    const n = FIBONACCI_POSITION;
 
     worker.postMessage({ n });
   });
