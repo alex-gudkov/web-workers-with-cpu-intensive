@@ -1,1 +1,1 @@
-export const FIBONACCI_NUMBER_POSITION = 5;
+export const FIBONACCI_NUMBER_POSITION = 40;
