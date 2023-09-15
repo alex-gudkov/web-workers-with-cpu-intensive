@@ -1,3 +1,7 @@
+/**
+ * @param {number} position
+ * @returns {number} The Fibonacci number at the given position.
+ */
 export function countFibonacciNumber(position) {
   if (position <= 0) {
     return 0;

@@ -11,7 +11,10 @@ export class Logger {
     Logger.id++;
   }
 
-  log(...args) {
-    console.log(this.#idTag, this.#idTagCss, ...args);
+  /**
+   * @param {any[]} data
+   */
+  log(...data) {
+    console.log(this.#idTag, this.#idTagCss, ...data);
   }
 }

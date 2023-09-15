@@ -1,5 +1,8 @@
 import { FIBONACCI_NUMBER_POSITION } from '../fibonacci/fibonacci-number-position.js';
 
+/**
+ * @returns {Promise<number>}
+ */
 export async function countFibonacciNumberInWorkerThread() {
   const worker = new Worker('./src/runners/thread.js', { type: 'module' });
 
