@@ -10,8 +10,8 @@
 
 .block-container {
   height: 50px;
-  width: 400px;
-  background: #000;
+  width: 200px;
+  background: lightgray;
 }
 
 .block {
@@ -24,21 +24,22 @@
   
   animation: 1s linear 0s infinite alternate block-slide;
   
-  background-color: blue;
+  background-color: dodgerblue;
 }
 
 #button-local {
-  margin: 20px;
+  margin: 10px;
 }
 
 #button-worker {
-  margin: 20px;
+  margin: 10px;
 }
 
 .block:hover {
-  background-color: red;
+  background-color: crimson;
 }
 
 .block-text {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
 }
